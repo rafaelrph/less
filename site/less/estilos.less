@@ -1,5 +1,6 @@
 @cor-padrao: #c24e4b;
-@fundo-padrao: #FFF;
+@fonte-clara: #FFF;
+@cor-secundaria: #1e2c35;
 
 /** Geral **/
 body {
@@ -31,7 +32,7 @@ body {
   /** Header **/
   header {
     border-top: 5px solid @cor-padrao;
-    background: rgba(30, 44, 53, 0.8);
+    background: fade(@cor-secundaria, 80);
     height: 90px;
     width: 100%;
     position: absolute;
@@ -162,11 +163,11 @@ body {
   
   /** Planos **/
   .planos {
-    background: #1e2c35;
+    background: @cor-secundaria;
   }
   
   .planos h2 {
-    color: #fff;
+    color: @fonte-clara;
   }
   
   .plano {
@@ -182,7 +183,7 @@ body {
   }
   
   .plano h3 {
-    color: #fff;
+    color: @fonte-clara;
     font-size: 1.8em;
     background: @cor-padrao;
     text-align: center;
@@ -220,7 +221,7 @@ body {
   .plano button {
     background: @cor-padrao;
     border: 0;
-    color: #fff;
+    color: @fonte-clara;
     width: 210px;
     height: 38px;
     font-size: 1.2em;
@@ -318,7 +319,7 @@ body {
     margin: 0 auto;
     background: @cor-padrao;
     border: 0;
-    color: #fff;
+    color: @fonte-clara;
     width: 210px;
     height: 38px;
     font-size: 1.2em;
@@ -347,7 +348,7 @@ body {
   
   footer::before {
     content: "";
-    background: #1e2c35;
+    background: @cor-secundaria;
     top: 0;
     left: 0;
     bottom: 0;
@@ -392,7 +393,7 @@ body {
   }
   
   footer a {
-    color: #fff;
+    color: @fonte-clara;
     text-decoration: none;
   }
   
@@ -425,4 +426,12 @@ body {
   
   .social a[href*="instagram"] {
     background-image: url(../imagens/instagram.png);
+  }
+
+  button:hover {
+    background: lighten(@cor-padrao, 5);
+  }
+
+  button:active {
+    background: darken(@cor-padrao, 5);
   }

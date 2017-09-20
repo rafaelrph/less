@@ -133,7 +133,7 @@ header .container {
   background: #1e2c35;
 }
 .planos h2 {
-  color: #fff;
+  color: #FFF;
 }
 .plano {
   background: white;
@@ -146,7 +146,7 @@ header .container {
   background: #dedede;
 }
 .plano h3 {
-  color: #fff;
+  color: #FFF;
   font-size: 1.8em;
   background: #c24e4b;
   text-align: center;
@@ -178,7 +178,7 @@ header .container {
 .plano button {
   background: #c24e4b;
   border: 0;
-  color: #fff;
+  color: #FFF;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
@@ -261,7 +261,7 @@ textarea {
   margin: 0 auto;
   background: #c24e4b;
   border: 0;
-  color: #fff;
+  color: #FFF;
   width: 210px;
   height: 38px;
   font-size: 1.2em;
@@ -324,7 +324,7 @@ footer .container img {
   display: inline;
 }
 footer a {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
 }
 .social li {
@@ -351,4 +351,10 @@ footer a {
 }
 .social a[href*="instagram"] {
   background-image: url(../imagens/instagram.png);
+}
+button:hover {
+  background: #c8615e;
+}
+button:active {
+  background: #b6413e;
 }
