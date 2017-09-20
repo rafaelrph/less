@@ -1,6 +1,25 @@
+//Variáveis
 @cor-padrao: #c24e4b;
 @fonte-clara: #FFF;
 @cor-secundaria: #1e2c35;
+
+//Mixins
+.borda-arredondada(@raio-borda: 0.3em) {
+    border-radius: @raio-borda;
+    -webkit-border-radius: @raio-borda;
+    -o-border-radius: @raio-borda;
+    -moz-border-radius: @raio-borda;
+}
+
+.sombra-padrao {
+    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+}
+
+.image-replacement {
+    text-indent: -9999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
 
 /** Geral **/
 body {
@@ -42,30 +61,30 @@ body {
     position: relative;
   }
   
-  .menu-opcoes {
-    position: absolute;
-    right: 0;
-    top: -.5em;
-    font-size: 1.2em;
-    font-weight: lighter;
-  }
-  
-  .menu-opcoes ul {
-    padding-left: 0;
-  }
-  
-  .menu-opcoes li {
-    display: inline-block;
-    width: 5em;
-  }
-  
-  .menu-opcoes a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .menu-opcoes a:hover {
-    text-decoration: underline;
+  .menu-principal {
+      position: absolute;
+      right: 0;
+      top: -.5em;
+      font-size: 1.2em;
+      font-weight: lighter;
+
+      ul {
+        padding-left: 0;
+      }
+      
+      li {
+        display: inline-block;
+        width: 5em;
+      }
+      
+      a {
+        color: white;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
   }
   
   /** Destaque **/
@@ -99,9 +118,8 @@ body {
     border: 0;
     padding: .6em;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    .borda-arredondada(2em);
+    .sombra-padrao;
     font-weight: bold;
   }
   
@@ -138,9 +156,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 60px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
+    .image-replacement;
     background-position: center;
     margin: 1em 1.5em 0 0;
   }
@@ -225,9 +241,8 @@ body {
     width: 210px;
     height: 38px;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+    .borda-arredondada();
+    .sombra-padrao;
     margin-left: 2em;
   }
   
@@ -310,8 +325,7 @@ body {
     width: 100%;
     margin-bottom: .8em;
     padding: 4px 8px;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    .borda-arredondada();
     border: 2px solid #ccc;
   }
   
@@ -323,8 +337,7 @@ body {
     width: 210px;
     height: 38px;
     font-size: 1.2em;
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
+    .borda-arredondada();
     box-shadow: 0 2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
   }
   
@@ -405,9 +418,7 @@ body {
     display: block;
     width: 55px;
     height: 55px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background-repeat: no-repeat;
+    .image-replacement;
     margin-left: 1em;
   }
   
